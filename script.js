@@ -41,11 +41,16 @@ function dropEvent(event){
   else if(event.target.id == "drop3"){
     addItem(id, dropArea3);
   }
+  else if(event.target.id.slice(0, 4) == "item"){
+    event.preventDefault();
+    var id = event.dataTransfer.getData("id");
+    event.target.parentElement.appendChild(document.getElementById(id));
+    success = false;
+  }
   else{
     success = false;
   }
   if(success){
-    console.log(event);
     event.preventDefault();
     var id = event.dataTransfer.getData("id");
     event.target.appendChild(document.getElementById(id));
