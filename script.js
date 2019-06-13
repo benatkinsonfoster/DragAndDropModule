@@ -55,11 +55,13 @@ function checkAnswers(){
     for(var ii = 0; ii < dropAreas[i].length; ii++){
       if(correctDropAreas[i].includes(dropAreas[i][ii], 0)){
         $('#item' + dropAreas[i][ii]).addClass("correct");
+        $('#item' + dropAreas[i][ii]).removeClass("incorrect");
         console.log(`Item ${dropAreas[i][ii]} correct`);
       }
       else{
         $('#item' + dropAreas[i][ii]).addClass("incorrect");
         console.log(`Item ${dropAreas[i][ii]} incorrect`);
+        $('#item' + dropAreas[i][ii]).removeClass("correct");
       }
     }
   }
