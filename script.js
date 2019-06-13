@@ -7,14 +7,18 @@ $(document).ready(function(){
     drop: function(event, ui){
       ui.draggable.css({
         top:0,
-        left:0
+        left:0,
+        revert: 'invalid'
       });
       $(this).append(ui.draggable);
     }
   });
   $('.dragItem').draggable({
     cursor: "move",
-    grid: [25, 34]
+    revert: 'invalid',
+    helper: 'clone',
+    appendTo: 'body',
+    scroll: false
   });
 });
 
