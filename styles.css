@@ -73,9 +73,11 @@ h1{
     background-color: rgba(0, 0, 0, .5);
     border-radius: 10px;
     border: 2px solid #ffffff;
+    min-height: 30px;
 }
 
 ::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: #ffffff;
+    min-height: 30px;
 }
