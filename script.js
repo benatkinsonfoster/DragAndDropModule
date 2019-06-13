@@ -1,6 +1,10 @@
-dropArea1 = [];
-dropArea2 = [];
-dropArea3 = [];
+var dropArea1 = [];
+var dropArea2 = [];
+var dropArea3 = [];
+var itemBeingDragged;
+var correctDropArea1 = [1, 2, 3, 4];
+var correctDropArea2 = [5, 6];
+var correctDropArea3 = [7, 8, 9];
 
 $(document).ready(function(){
   $('.dropArea').droppable({
@@ -20,46 +24,17 @@ $(document).ready(function(){
     appendTo: 'body',
     scroll: false
   });
+  $('#resetButton').click(reset);
+  $('#checkButton').click(checkAnswers);
 });
 
-function removeDuplicates(item){
-  for(var i = dropArea1.length-1; i = 0; i--){
-    if(dropArea1[i] == item){
-      dropArea1.splice(i, 1);
-    }
-  }
-  for(var i = dropArea2.length-1; i = 0; i--){
-    if(dropArea2[i] == item){
-      dropArea2.splice(i, 1);
-    }
-  }
-  for(var i = dropArea3.length-1; i = 0; i--){
-    if(dropArea3[i] == item){
-      dropArea3.splice(i, 1);
-    }
-  }
+function checkAnswers(){
+  $('#dropArea1').find("div").each(function(){dropArea1.push(this.id)});
+  $('#dropArea2').find("div").each(function(){dropArea2.push(this.id)});
+  $('#dropArea3').find("div").each(function(){dropArea3.push(this.id)});
+  console.log(dropArea1);
 }
 
-function addItem(item, area){
-  removeDuplicates(item);
-  area.push(item);
-  console.log(`Added ${item} to ${area}`);
-}
-
-if (!("path" in Event.prototype)){
-	Object.defineProperty(Event.prototype, "path", {
-	  get: function() {
-	    var path = [];
-	    var currentElem = this.target;
-	    while (currentElem) {
-	      path.push(currentElem);
-	      currentElem = currentElem.parentElement;
-	    }
-	    if (path.indexOf(window) === -1 && path.indexOf(document) === -1)
-	      path.push(document);
-	    if (path.indexOf(window) === -1)
-	      path.push(window);
-	    return path;
-	  }
-	});
+function reset(){
+  window.location.reload();
 }
