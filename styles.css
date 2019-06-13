@@ -71,6 +71,7 @@ h1{
 /* !important is needed sometimes */
 ::-webkit-scrollbar {
   width: 12px !important;
+  height: 30px;
 }
 
 /* Track */
