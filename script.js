@@ -2,6 +2,22 @@ dropArea1 = [];
 dropArea2 = [];
 dropArea3 = [];
 
+$(document).ready(function(){
+  $('.dropArea').droppable({
+    drop: function(event, ui){
+      ui.draggable.css({
+        top:0,
+        left:0
+      });
+      $(this).append(ui.draggable);
+    }
+  });
+  $('.dragItem').draggable({
+    cursor: "move",
+    grid: [25, 34]
+  });
+});
+
 function removeDuplicates(item){
   for(var i = dropArea1.length-1; i = 0; i--){
     if(dropArea1[i] == item){
