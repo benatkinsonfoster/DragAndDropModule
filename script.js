@@ -6,8 +6,8 @@ $(document).ready(function(){
   $('.dropArea').droppable({
     drop: function(event, ui){
       ui.draggable.css({
-        top:0,
-        left:0,
+        top:'50%',
+        left:'50%',
         revert: 'invalid'
       });
       $(this).append(ui.draggable);
