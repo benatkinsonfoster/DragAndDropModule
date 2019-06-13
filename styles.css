@@ -16,6 +16,14 @@
   border-width: thick !important;
 }
 
+.correct{
+  background-color: green !important;
+}
+
+.incorrect{
+  background-color: red !important;
+}
+
 #topSection{
   display: flex;
   flex-direction: row;
