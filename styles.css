@@ -44,12 +44,28 @@
   background-color: darkgrey;
 }
 
+#checkButton{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30%;
+  height: 40%;
+}
+
+#resetButton{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 30%;
+  height: 40%;
+}
+
 #dragList{
   overflow-x: scroll;
   overflow-y: hidden;
   display:flex;
   flex-direction: row;
-  height: 40%;
+  height: 5s0%;
 }
 
 .dragItem{
