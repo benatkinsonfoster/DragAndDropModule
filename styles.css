@@ -25,6 +25,7 @@
 
 #dragList{
   overflow-x: scroll;
+  overflow-y: hidden;
   display:flex;
   flex-direction: row;
   height: 40%;
