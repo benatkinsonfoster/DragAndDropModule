@@ -27,12 +27,13 @@
   overflow-x: scroll;
   display:flex;
   flex-direction: row;
+  height: 80%;
 }
 
 .dragItem{
   width: auto;
   font-size: 24pt;
-  min-width: 20%;
+  min-width: 100px;
   box-sizing: border-box;
   background-color: lightgrey;
   border-radius: 5px;
