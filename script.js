@@ -46,43 +46,6 @@ function addItem(item, area){
   console.log(`Added ${item} to ${area}`);
 }
 
-function dragOverEvent(event){
-  event.preventDefault();
-}
-
-function dropEvent(event){
-  var success = true;
-  if(event.target.id == "drop1"){
-    addItem(id, dropArea1);
-  }
-  else if(event.target.id == "drop2"){
-    addItem(id, dropArea2);
-  }
-  else if(event.target.id == "drop3"){
-    addItem(id, dropArea3);
-  }
-  else if(event.target.id.slice(0, 4) == "item"){
-    event.preventDefault();
-    var id = event.dataTransfer.getData("id");
-    event.target.parentElement.appendChild(document.getElementById(id));
-    success = false;
-  }
-  else{
-    success = false;
-  }
-  if(success){
-    event.preventDefault();
-    var id = event.dataTransfer.getData("id");
-    event.target.appendChild(document.getElementById(id));
-  }
-}
-
-function drag(event){
-  event.dataTransfer.setData("element", event.target.outerHTML);
-  event.dataTransfer.setData("source", event.path[2].outerHTML);
-  event.dataTransfer.setData("id", event.target.id);
-}
-
 if (!("path" in Event.prototype)){
 	Object.defineProperty(Event.prototype, "path", {
 	  get: function() {
