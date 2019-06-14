@@ -47,6 +47,7 @@ function checkAnswers(){
   dropAreas[0] = [];
   dropAreas[1] = [];
   dropAreas[2] = [];
+  unusedItems = [];
   for(var i = 1; i <= 9; i++){
     var area = $('#item' + i).parent()[0].id;
     switch(area){
@@ -58,6 +59,9 @@ function checkAnswers(){
       break;
       case 'drop3':
         dropAreas[2].push(i);
+      break;
+      default:
+        unusedItems.push(i);
       break;
     }
   }
@@ -76,9 +80,22 @@ function checkAnswers(){
       }
     }
   }
-  if(correct){
+  if(correct && unusedItems.length == 0){
     $('#endScreen').removeClass('hidden');
   }
+  else if(unusedItems.length == 0){
+    $('#tryAgainScreen').removeClass('hidden');
+    $('#tryAgainScreen').animate({ left: '10%' }, 1000, function() {
+      setTimeout(hideTryAgainScreen, 3000);
+    });
+  }
+}
+
+function hideTryAgainScreen(){
+  console.log("hide!");
+  $('#tryAgainScreen').animate({ left: '100%' }, 1000, function() {
+    $('#tryAgainScreen').addClass('hidden');
+  });
 }
 
 function reset(){
