@@ -50,6 +50,9 @@
   right: 10px;
   width: 30%;
   height: 40%;
+  color: #FFF;
+  border-color: #76CA02;
+  background-color: #76CA02;
 }
 
 #resetButton{
@@ -58,6 +61,36 @@
   left: 10px;
   width: 30%;
   height: 40%;
+  color: #FFF;
+  border-color: #ED1C24;
+  background-color: #ED1C24;
+}
+
+.btn{
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0.6em 1em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  color: #002147;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #FFF;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  font-size: 14px;
+  line-height: 1.42857;
 }
 
 #dragList{
