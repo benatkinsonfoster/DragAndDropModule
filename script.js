@@ -28,10 +28,22 @@ $(document).ready(function(){
   });
   $('#resetButton').click(reset);
   $('#checkButton').click(checkAnswers);
+  $('#closeButton').click(closePage);
+  $('#quitButton').click(quit);
 });
+
+function quit(){
+  parent.history.back();
+  return false;
+}
+
+function closePage(){
+  $('#endScreen').addClass('hidden');
+}
 
 function checkAnswers(){
   console.log("Checking answers...");
+  var correct = true;
   dropAreas[0] = [];
   dropAreas[1] = [];
   dropAreas[2] = [];
@@ -49,8 +61,6 @@ function checkAnswers(){
       break;
     }
   }
-  console.log(dropAreas[0]);
-  console.log(correctDropAreas[0]);
   for(var i = 0; i < 3; i++){
     for(var ii = 0; ii < dropAreas[i].length; ii++){
       if(correctDropAreas[i].includes(dropAreas[i][ii], 0)){
@@ -62,8 +72,12 @@ function checkAnswers(){
         $('#item' + dropAreas[i][ii]).addClass("incorrect");
         console.log(`Item ${dropAreas[i][ii]} incorrect`);
         $('#item' + dropAreas[i][ii]).removeClass("correct");
+        correct = false;
       }
     }
+  }
+  if(correct){
+    $('#endScreen').removeClass('hidden');
   }
 }
 

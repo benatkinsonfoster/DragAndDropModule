@@ -61,9 +61,6 @@
   left: 10px;
   width: 30%;
   height: 40%;
-  color: #FFF;
-  border-color: #ED1C24;
-  background-color: #ED1C24;
 }
 
 .btn{
@@ -91,6 +88,12 @@
   text-shadow: none;
   font-size: 14px;
   line-height: 1.42857;
+}
+
+.btn-danger{
+  color: #FFF;
+  border-color: #ED1C24;
+  background-color: #ED1C24;
 }
 
 #dragList{
@@ -129,7 +132,41 @@ body{
 
 h1{
   display: inline-block;
-  font-size: 4.5vw;
+  font-size: 13px;
+}
+
+h2{
+  color: black;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#endScreen{
+  position: absolute;
+  padding: 10px;
+  height: 90%;
+  width: 90%;
+  top:5%;
+  left: 5%;
+  background-color: white;
+  z-index: 10;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.hidden{
+  display: none;
+}
+
+#endScreen a{
+  font-size: 10px;
+  background-color: gold;
+  color: black;
+}
+
+#closeButton{
+  margin-top: 90%;
 }
 
 .noselect {
