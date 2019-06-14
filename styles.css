@@ -105,7 +105,7 @@
 .dragItem{
   width: auto;
   font-size: 20pt;
-  min-width: 100px;
+  min-width: 40px;
   box-sizing: border-box;
   background-color: lightgrey;
   border-radius: 5px;
