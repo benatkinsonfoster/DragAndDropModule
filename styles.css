@@ -65,18 +65,19 @@
   overflow-y: hidden;
   display:flex;
   flex-direction: row;
-  height: 5s0%;
+  height: 50%;
+  box-sizing: border-box;
 }
 
 .dragItem{
   width: auto;
-  font-size: 30pt;
+  font-size: 20pt;
   min-width: 100px;
-  min-height: 100px;
   box-sizing: border-box;
   background-color: lightgrey;
   border-radius: 5px;
   text-align: center;
+  vertical-align: middle;
   margin: 10px;
   overflow: hidden;
   z-index: 5;
