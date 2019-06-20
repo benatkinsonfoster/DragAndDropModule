@@ -39,6 +39,7 @@ function quit(){
 
 function closePage(){
   $('#endScreen').addClass('hidden');
+  window.location = "http://localhost:8080/link/CompleteDragAndDrop/";
 }
 
 function checkAnswers(){
