@@ -39,7 +39,18 @@ function quit(){
 
 function closePage(){
   $('#endScreen').addClass('hidden');
-  window.location = "http://localhost:8080/link/CompleteDragAndDrop/";
+  if(inIframe){
+    window.top.location = "http://localhost:8080/link/CompleteDragAndDrop/";
+  }
+}
+
+function inIframe(){
+  try{
+    return window.self !== window.top;
+  }
+  catch(e){
+    return true;
+  }
 }
 
 function checkAnswers(){
