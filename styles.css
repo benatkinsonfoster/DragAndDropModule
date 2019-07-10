@@ -141,6 +141,10 @@ body{
   overflow: hidden;
 }
 
+section.header {
+    border-bottom: 1px solid #fff;
+}
+
 h1{
   display: inline-block;
   font-size: 20px;
